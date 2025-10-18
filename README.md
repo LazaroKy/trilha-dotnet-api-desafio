@@ -1,6 +1,14 @@
 # DIO - Trilha .NET - API e Entity Framework
 www.dio.me
 
+### Execute o seguinte comando para executar o projeto com docker compose:
+
+```bash
+docker compose up --build
+```
+
+---
+
 ## Desafio de projeto
 Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de API e Entity Framework, da trilha .NET da DIO.
 

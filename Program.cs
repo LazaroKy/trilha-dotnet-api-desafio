@@ -24,7 +24,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<OrganizadorContext>();
+    db.Database.Migrate(); // aplica todas as migrations pendentes
+}
+
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

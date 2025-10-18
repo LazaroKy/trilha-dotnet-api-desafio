@@ -1,7 +1,7 @@
 services:
   postgresDB:
-    image: postgres
-    container_name: postgresDB:16
+    image: postgres:16
+    container_name: postgresDB
     ports:
       - "5432:5432"
     restart: always
@@ -12,6 +12,17 @@ services:
     volumes:
       - sys-db-agedamento:/var/postgresql/data
 
+  api-tarefas:
+    build: .
+    image: sys_agedamento_tarefa:0.1
+    ports:
+      - "5181:5181"
+    environment:
+       ASPNETCORE_ENVIRONMENT: Development
+    depends_on: 
+      - postgresDB
+    command: 
+    
 volumes:
   sys-db-agedamento:
      name: db_agendamento
