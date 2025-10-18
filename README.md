@@ -1,11 +1,14 @@
 # DIO - Trilha .NET - API e Entity Framework
 www.dio.me
 
-### Execute o seguinte comando para executar o projeto com docker compose:
+### Deseja executar o projeto? Siga os seguintes passos:
+1. Clone o repositório:
 
-```bash
-docker compose up --build
-```
+       git clone https://github.com/LazaroKy/trilha-dotnet-api-desafio.git
+2. Com terminal localizado na diretório do projeto clonado execute o comando docker compose:
+
+       docker compose up --build
+3. Tudo pronto!  __Acesse os endpoints com protocolo HTTP na porta 5181__ e gerencie suas atividades!
 
 ---
 
