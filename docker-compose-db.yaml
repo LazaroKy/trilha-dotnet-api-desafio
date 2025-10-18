@@ -1,0 +1,17 @@
+services:
+  postgresDB:
+    image: postgres
+    container_name: postgresDB:16
+    ports:
+      - "5432:5432"
+    restart: always
+    environment:
+       POSTGRES_USER: "mydsa"
+       POSTGRES_PASSWORD: "dsachoice"
+       POSTGRES_DB: "agendamento_tarefas"
+    volumes:
+      - sys-db-agedamento:/var/postgresql/data
+
+volumes:
+  sys-db-agedamento:
+     name: db_agendamento
